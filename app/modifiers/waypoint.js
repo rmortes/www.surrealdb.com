@@ -1,14 +1,13 @@
-import { setModifierManager, capabilities } from '@ember/modifier';
 import Viewport from '@ascua/viewport/classes/viewport';
 import enabled from '@ascua/viewport/utils/enabled';
 import { setOwner } from '@ember/application';
+import { capabilities, setModifierManager } from '@ember/modifier';
 import { inject } from '@ember/service';
 
 const viewport = Viewport.Instance;
 
 export default setModifierManager(
 	(owner) => ({
-
 		capabilities: capabilities('3.13', { disableAutoTracking: true }),
 
 		createModifier(modifier, args) {
@@ -25,19 +24,16 @@ export default setModifierManager(
 
 		destroyModifier(instance) {
 			instance.remove();
-		}
-
+		},
 	}),
 	class WaypointModifier {
-
 		@inject waypoints;
 
-		constructor(owner, args) {
-		    setOwner(this, owner);
+		constructor(owner) {
+			setOwner(this, owner);
 		}
 
 		install(element, { positional: [name] }) {
-
 			this.element = element;
 
 			element.id = name;
@@ -47,14 +43,18 @@ export default setModifierManager(
 			if (enabled()) {
 				viewport.observe(
 					element,
-					() => { this.waypoints.add(this.name); },
-					() => { this.waypoints.del(this.name); },
-					{ threshold: 0, rootMargin: '0px 0px -75% 0px' },
+					() => {
+						this.waypoints.add(this.name);
+					},
+					() => {
+						this.waypoints.del(this.name);
+					},
+					{ threshold: 0, rootMargin: '0px 0px -75% 0px' }
 				);
 			}
 		}
 
-		update([name]) {
+		update() {
 			// Ignore
 		}
 

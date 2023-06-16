@@ -24,7 +24,6 @@ module.exports = function (defaults) {
 				'sql',
 				'yaml',
 			],
-			copyToClipboard: true,
 		},
 		snippetPaths: ['app/snippets'],
 		snippetRegexes: {

@@ -1,9 +1,7 @@
+import { arg, cache } from '@ascua/decorators';
 import Component from '@glimmer/component';
-import { cache } from '@ascua/decorators';
-import { arg } from '@ascua/decorators';
 
 export default class extends Component {
-
 	@arg count = 100;
 
 	@cache get testimonials() {
@@ -20,7 +18,7 @@ export default class extends Component {
 				date: new Date('2022-03-28'),
 				name: 'Zafar Ansari',
 				user: 'ansarizafar',
-				text: "SurrealDB is like a dream database for every developer. The features set is too good to be true. Is it real???",
+				text: 'SurrealDB is like a dream database for every developer. The features set is too good to be true. Is it real???',
 				link: 'https://discord.com/channels/902568124350599239/902568124350599242/958055360059547739',
 			},
 			{
@@ -36,7 +34,7 @@ export default class extends Component {
 				date: new Date('2022-08-20'),
 				name: '',
 				user: 'greven',
-				text: "This looks fantastic, congrats! This paired with Elixir Phoenix could be something else for real time. Need to try it out.",
+				text: 'This looks fantastic, congrats! This paired with Elixir Phoenix could be something else for real time. Need to try it out.',
 				link: 'https://www.reddit.com/r/rust/comments/wt3ygg/comment/il2pyyg/?utm_source=share&utm_medium=web2x&context=3',
 			},
 			{
@@ -68,7 +66,7 @@ export default class extends Component {
 				date: new Date('2022-08-01'),
 				name: 'Mário Monteiro',
 				user: 'koakh',
-				text: "I came across surrealdb today and it seems impressive, all the features in one solution like nosql, graphs, distributed, realtime, permissions, auth, rust and node driver, seem too good to be true. Now started playing with it 😀",
+				text: 'I came across surrealdb today and it seems impressive, all the features in one solution like nosql, graphs, distributed, realtime, permissions, auth, rust and node driver, seem too good to be true. Now started playing with it 😀',
 				link: 'https://discord.com/channels/902568124350599239/970333598035112017/1003418467002744852',
 			},
 			{
@@ -76,7 +74,7 @@ export default class extends Component {
 				date: new Date('2022-08-16'),
 				name: 'Ole Peterson',
 				user: 'peteole',
-				text: "I was looking for something exactly like this for a long time! I have a feeling there was much too little going on in the database market for the last years and a rewrite from scratch that fixes the historical issues of sql seems like the right thing we need!",
+				text: 'I was looking for something exactly like this for a long time! I have a feeling there was much too little going on in the database market for the last years and a rewrite from scratch that fixes the historical issues of sql seems like the right thing we need!',
 				link: 'https://dev.to/peteole/comment/212l2',
 			},
 			{
@@ -84,7 +82,7 @@ export default class extends Component {
 				date: new Date('2022-08-05'),
 				name: 'Makeshift',
 				user: 'makeshiftindie',
-				text: "love this idea. I wonder how to apply it to my next ETL project",
+				text: 'love this idea. I wonder how to apply it to my next ETL project',
 				link: 'https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG',
 			},
 			{
@@ -100,7 +98,7 @@ export default class extends Component {
 				date: new Date('2022-08-05'),
 				name: '',
 				user: 'pdyc',
-				text: "My weekend is ruined since i will be playing with surrealdb this weekend :-)",
+				text: 'My weekend is ruined since i will be playing with surrealdb this weekend :-)',
 				link: 'https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG',
 			},
 			{
@@ -108,7 +106,7 @@ export default class extends Component {
 				date: new Date('2022-08-05'),
 				name: '',
 				user: 'Ghidra',
-				text: "Very cool stuff for sure; it looks like a very interesting + useful product.",
+				text: 'Very cool stuff for sure; it looks like a very interesting + useful product.',
 				link: 'https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG',
 			},
 			{
@@ -132,7 +130,7 @@ export default class extends Component {
 				date: new Date('2022-08-05'),
 				name: 'Kamyar Inanloo',
 				user: '',
-				text: "Wow! Well done! I am thinking about creating more high performance products in Rust but you did it!",
+				text: 'Wow! Well done! I am thinking about creating more high performance products in Rust but you did it!',
 				link: 'https://www.linkedin.com/feed/update/urn:li:groupPost:4973032-6961346750498447360?commentUrn=urn%3Ali%3Acomment%3A%28groupPost%3A4973032-6961346750498447360%2C6961384432641392640%29',
 			},
 			{
@@ -148,10 +146,9 @@ export default class extends Component {
 				date: new Date('2022-08-05'),
 				name: 'Justin Walker',
 				user: 'jwalker',
-				text: "The site looks great and the docs are sooo clean... well done! I will definitely look into using this when I start on the dev work for my project!",
+				text: 'The site looks great and the docs are sooo clean... well done! I will definitely look into using this when I start on the dev work for my project!',
 				link: 'https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG',
 			},
 		];
 	}
-
 }

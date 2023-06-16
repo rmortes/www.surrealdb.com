@@ -1,8 +1,7 @@
-import Controller from '@ember/controller';
 import { cache } from '@ascua/decorators';
+import Controller from '@ember/controller';
 
 export default class extends Controller {
-
 	@cache get model() {
 		return [
 			{
@@ -18,9 +17,7 @@ export default class extends Controller {
 			{
 				goal: 'Q3 2023',
 				name: 'SurrealDB 1.0.0',
-				tags: [
-					'SurrealDB user-interface dashboard',
-				]
+				tags: ['SurrealDB user-interface dashboard'],
 			},
 			{
 				time: new Date('2023-06-30'),
@@ -30,7 +27,7 @@ export default class extends Controller {
 					'Full text indexing and filtering',
 					'Live queries and record changes',
 					'Deployment to WebAssembly',
-				]
+				],
 			},
 			{
 				time: new Date('2023-03-31'),
@@ -40,7 +37,7 @@ export default class extends Controller {
 					'Custom procedures and functions',
 					'Rust client and embedded library API',
 					'Deployment to WebAssembly',
-				]
+				],
 			},
 			{
 				time: new Date('2022-09-30'),
@@ -49,7 +46,7 @@ export default class extends Controller {
 					'Support for deep-merge record updates',
 					'Dynamic expressions in complex Record IDs',
 					'Embedded Record IDs in CREATE and RELATE statements',
-				]
+				],
 			},
 			{
 				time: new Date('2022-08-29'),
@@ -59,22 +56,17 @@ export default class extends Controller {
 					'Complex Record IDs with arrays and objects',
 					'Record ID range queries for time-series',
 					'Single-node on-disk storage with support for multiple concurrent writers and readers',
-				]
+				],
 			},
 			{
 				time: new Date('2022-08-13'),
 				name: 'SurrealDB 1.0.0-beta.6',
-				tags: [
-					'Command-line REPL',
-					'Environment variable support',
-				]
+				tags: ['Command-line REPL', 'Environment variable support'],
 			},
 			{
 				time: new Date('2022-07-28'),
 				name: 'SurrealDB 1.0.0-beta.4',
-				tags: [
-					'Add server strict mode',
-				]
+				tags: ['Add server strict mode'],
 			},
 			{
 				time: new Date('2022-07-11'),
@@ -97,9 +89,8 @@ export default class extends Controller {
 					'Data import and export',
 					'Command-line tool',
 					'Support for amd64, arm64 on Linux and Darwin',
-				]
+				],
 			},
 		];
 	}
-
 }

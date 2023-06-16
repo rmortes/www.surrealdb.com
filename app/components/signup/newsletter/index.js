@@ -1,27 +1,25 @@
+import { drop } from '@ascua/tasks';
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
-import { drop } from '@ascua/tasks';
 
 export default class extends Component {
-
 	@tracked show;
 
 	@tracked done;
 
 	@tracked email;
 
-	@drop * submit(event) {
-
+	@drop *submit(event) {
 		event.stopPropagation();
 
 		event.preventDefault();
 
-		if (!this.email) throw "Please provide an email";
+		if (!this.email) throw 'Please provide an email';
 
 		yield fetch('https://contact.surrealdb.com', {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
 				Event: 'Registered for SurrealDB marketing',
@@ -31,7 +29,5 @@ export default class extends Component {
 
 		this.email = null;
 		this.done = true;
-
 	}
-
 }

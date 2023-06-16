@@ -1,9 +1,8 @@
+import { action } from '@ember/object';
 import Route from '@ember/routing/route';
 import { inject } from '@ember/service';
-import { action } from '@ember/object';
 
 export default class extends Route {
-
 	@inject router;
 
 	@inject store;
@@ -12,8 +11,7 @@ export default class extends Route {
 		return this.store.select('post');
 	}
 
-	@action error(error, transition) {
+	@action error() {
 		return this.router.transitionTo('blog');
 	}
-
 }

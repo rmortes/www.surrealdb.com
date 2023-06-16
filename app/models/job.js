@@ -1,9 +1,7 @@
+import { boolean, string } from '@ascua/surreal/field';
 import Model from '@ascua/surreal/model';
-import { boolean } from '@ascua/surreal/field';
-import { string } from '@ascua/surreal/field';
 
 export default class Job extends Model {
-
 	// ------------------------------
 	// Persistent properties
 	// ------------------------------
@@ -17,5 +15,4 @@ export default class Job extends Model {
 	@string url;
 
 	@boolean visible;
-
 }

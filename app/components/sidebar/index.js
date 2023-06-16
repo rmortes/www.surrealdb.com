@@ -1,9 +1,8 @@
-import Component from '@glimmer/component';
-import { inject } from '@ember/service';
 import { action } from '@ember/object';
+import { inject } from '@ember/service';
+import Component from '@glimmer/component';
 
 export default class extends Component {
-
 	@inject artist;
 
 	@inject surreal;
@@ -13,5 +12,4 @@ export default class extends Component {
 			document.body.removeAttribute('sidebar');
 		}
 	}
-
 }

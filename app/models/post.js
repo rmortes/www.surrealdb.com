@@ -1,12 +1,8 @@
-import Model from '@ascua/surreal/model';
-import { array } from '@ascua/surreal/field';
-import { boolean } from '@ascua/surreal/field';
-import { datetime } from '@ascua/surreal/field';
-import { string } from '@ascua/surreal/field';
 import { cache } from '@ascua/decorators';
+import { array, boolean, datetime, string } from '@ascua/surreal/field';
+import Model from '@ascua/surreal/model';
 
 export default class Post extends Model {
-
 	// ------------------------------
 	// Persistent properties
 	// ------------------------------
@@ -36,5 +32,4 @@ export default class Post extends Model {
 	@cache get url() {
 		return `https://surrealdb.com/blog/${this.slug}`;
 	}
-
 }

@@ -1,4 +1,4 @@
-import Surreal from "https://deno.land/x/surrealdb/mod.ts";
+import Surreal from 'https://deno.land/x/surrealdb/mod.ts';
 
 const db = new Surreal('http://127.0.0.1:8000/rpc');
 
@@ -14,7 +14,7 @@ async function main() {
 		await db.use('test', 'test');
 
 		// Create a new person with a random id
-		let created = await db.create("person", {
+		let created = await db.create('person', {
 			title: 'Founder & CEO',
 			name: {
 				first: 'Tobie',
@@ -25,18 +25,20 @@ async function main() {
 		});
 
 		// Update a person record with a specific id
-		let updated = await db.change("person:jaime", {
+		let updated = await db.change('person:jaime', {
 			marketing: true,
 		});
 
 		// Select all people records
-		let people = await db.select("person");
+		let people = await db.select('person');
 
 		// Perform a custom advanced query
-		let groups = await db.query('SELECT marketing, count() FROM type::table($tb) GROUP BY marketing', {
-			tb: 'person',
-		});
-
+		let groups = await db.query(
+			'SELECT marketing, count() FROM type::table($tb) GROUP BY marketing',
+			{
+				tb: 'person',
+			}
+		);
 	} catch (e) {
 		console.error('ERROR', e);
 	}

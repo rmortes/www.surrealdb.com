@@ -1,8 +1,7 @@
-import Controller from '@ember/controller';
 import { cache } from '@ascua/decorators';
+import Controller from '@ember/controller';
 
 export default class extends Controller {
-
 	@cache get model() {
 		return [
 			{
@@ -57,5 +56,4 @@ export default class extends Controller {
 			},
 		];
 	}
-
 }

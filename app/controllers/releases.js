@@ -1,8 +1,7 @@
-import Controller from '@ember/controller';
 import { cache } from '@ascua/decorators';
+import Controller from '@ember/controller';
 
 export default class extends Controller {
-
 	@cache get model() {
 		return [
 			{
@@ -38,43 +37,115 @@ export default class extends Controller {
 							'Improve error messages for unique indexes, when inserting records which already exist in the index',
 							'Add <code>meta::tb()</code> and <code>meta::id()</code> functions for retrieving separate parts of a SurrealDB Record ID',
 							'Add support for using 3rd party authentication JWTs with <code>DEFINE TOKEN ... ON SCOPE ...</code>',
-						]
+						],
 					},
 					{
 						name: 'Bug fixes',
 						text: [
-							{ category: 'bug', text: 'Add support for escaped characters and unicode characters in strings' },
-							{ category: 'bug', text: 'Ensure datetimes work correctly in Eastern timezones' },
-							{ category: 'bug', text: 'Ensure <code>is::uuid()</code> parses valid UUIDs correctly' },
-							{ category: 'bug', text: 'Ensure <code>LET</code> statements throw errors correctly on failure' },
-							{ category: 'bug', text: 'Ensure Record IDs are parsed correctly when defined as a string' },
-							{ category: 'bug', text: 'Fix bug where escaped characters were not supported in regex values' },
-							{ category: 'bug', text: 'Ensure datetimes with milliseconds or nanoseconds are parsed correctly' },
-							{ category: 'bug', text: 'Ensure datetimes with partial timezones are correctly calculated' },
-							{ category: 'bug', text: 'Ensure <code>time::month()</code> returns the month of the specified datetime' },
-							{ category: 'bug', text: 'Ensure <code>FETCH</code> clauses fetch the respective data correctly' },
-							{ category: 'bug', text: 'Handle connection errors properly when WebSocket clients disconnect improperly' },
-							{ category: 'bug', text: 'Ensure HTTP session is not verified multiple times when requesting an invalid HTTP route' },
-							{ category: 'bug', text: 'Use <code>Accept</code> header instead of <code>Content-Type</code> header for client content negotiation' },
-							{ category: 'bug', text: 'Fix key scan range iteration in RocksDB, which caused SurrealDB to randomly crash' },
-							{ category: 'bug', text: 'Ensure authenticated session data is stored after successful scope signup / signin' },
-							{ category: 'bug', text: 'Fix bug where <code>http</code> functions would panic when an invalid URI was specified' },
-							{ category: 'bug', text: 'Ensure correct transaction type (optimistic / pessimistic) was initiated when using TiKV distributed storage engine' },
-							{ category: 'bug', text: 'Ensure <code>math::mean()</code>, <code>math::median()</code>, and <code>math::sqrt()</code> work correctly with empty or zero values' },
-							{ category: 'bug', text: 'Fix bug where <code>MultiPoint</code>, <code>MultiLine</code>, and <code>MultiPolygon</code> geometry values were not formatted correctly' },
-							{ category: 'bug', text: 'Fix bug where defined fields with empty values would be set on the root object, losing the object structure' },
-						]
+							{
+								category: 'bug',
+								text: 'Add support for escaped characters and unicode characters in strings',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure datetimes work correctly in Eastern timezones',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure <code>is::uuid()</code> parses valid UUIDs correctly',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure <code>LET</code> statements throw errors correctly on failure',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure Record IDs are parsed correctly when defined as a string',
+							},
+							{
+								category: 'bug',
+								text: 'Fix bug where escaped characters were not supported in regex values',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure datetimes with milliseconds or nanoseconds are parsed correctly',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure datetimes with partial timezones are correctly calculated',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure <code>time::month()</code> returns the month of the specified datetime',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure <code>FETCH</code> clauses fetch the respective data correctly',
+							},
+							{
+								category: 'bug',
+								text: 'Handle connection errors properly when WebSocket clients disconnect improperly',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure HTTP session is not verified multiple times when requesting an invalid HTTP route',
+							},
+							{
+								category: 'bug',
+								text: 'Use <code>Accept</code> header instead of <code>Content-Type</code> header for client content negotiation',
+							},
+							{
+								category: 'bug',
+								text: 'Fix key scan range iteration in RocksDB, which caused SurrealDB to randomly crash',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure authenticated session data is stored after successful scope signup / signin',
+							},
+							{
+								category: 'bug',
+								text: 'Fix bug where <code>http</code> functions would panic when an invalid URI was specified',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure correct transaction type (optimistic / pessimistic) was initiated when using TiKV distributed storage engine',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure <code>math::mean()</code>, <code>math::median()</code>, and <code>math::sqrt()</code> work correctly with empty or zero values',
+							},
+							{
+								category: 'bug',
+								text: 'Fix bug where <code>MultiPoint</code>, <code>MultiLine</code>, and <code>MultiPolygon</code> geometry values were not formatted correctly',
+							},
+							{
+								category: 'bug',
+								text: 'Fix bug where defined fields with empty values would be set on the root object, losing the object structure',
+							},
+						],
 					},
 					{
 						name: 'Performance improvements',
 						text: [
-							{ category: 'performance', text: 'Miscellaneous performance optimizations and code cleanup' },
-							{ category: 'performance', text: 'Limit maximum allowed runtime and memory in JavaScript functions' },
-							{ category: 'performance', text: 'Ensure <code>crypto</code> and <code>rand</code> functions do not allow unbounded resource usage' },
-							{ category: 'performance', text: 'Ensure read-only transactions are used when write functionality is not needed when using TiKV distributed storage engine' },
-						]
+							{
+								category: 'performance',
+								text: 'Miscellaneous performance optimizations and code cleanup',
+							},
+							{
+								category: 'performance',
+								text: 'Limit maximum allowed runtime and memory in JavaScript functions',
+							},
+							{
+								category: 'performance',
+								text: 'Ensure <code>crypto</code> and <code>rand</code> functions do not allow unbounded resource usage',
+							},
+							{
+								category: 'performance',
+								text: 'Ensure read-only transactions are used when write functionality is not needed when using TiKV distributed storage engine',
+							},
+						],
 					},
-				]
+				],
 			},
 			{
 				time: new Date('2022-08-29'),
@@ -92,7 +163,7 @@ export default class extends Controller {
 					'Enable root authentication for client libraries using WebSocket protocol',
 					'Ensure <code>math::sum()</code> returns a number instead of a <code>NONE</code> value, when called on a non-array value',
 					'Add ACID compliant, persistent, on-disk storage implementation, with multiple concurrent writers using RocksDB',
-				]
+				],
 			},
 			{
 				time: new Date('2022-08-13'),
@@ -111,7 +182,7 @@ export default class extends Controller {
 					'Fix bug with SQL export, where <code>DEFINE INDEX</code> statements were not exported',
 					'Fix bug where multi-yield path expressions with multiple alias outputs were returning nested arrays',
 					'Fix bug where aliased field was not output when fetching a multi-yield expressions with a final alias yield',
-				]
+				],
 			},
 			{
 				time: new Date('2022-08-01'),
@@ -124,7 +195,7 @@ export default class extends Controller {
 					'Improve <code>surreal import</code> and <code>surreal export</code> cli commands',
 					'Fix bug where <code>GROUP BY</code> fields with an alias <code>AS</code> name were not output correctly',
 					'Fix SQL syntax parsing bug when specifying <code>DEFINE INDEX</code> statements with <code>UNIQUE</code> constraints',
-				]
+				],
 			},
 			{
 				time: new Date('2022-07-28'),
@@ -137,7 +208,7 @@ export default class extends Controller {
 					'Ensure default table permissions are set to <code>NONE</code> not <code>FULL</code>',
 					'Fix bug when defining <code>NS</code> and <code>DB</code> without first selecting a <code>NS</code> or <code>DB</code>',
 					'Fix bug with <code>VALUE</code> and <code>ASSERT</code> clauses in <code>DEFINE FIELD</code> statements when fields are not present in query',
-				]
+				],
 			},
 			{
 				time: new Date('2022-07-24'),
@@ -152,7 +223,7 @@ export default class extends Controller {
 					'Improve syntax for defining futures: <code>fn::future -></code> changed to <code>&lt;future&gt;</code>',
 					'Improve syntax for defining embedded functions: <code>fn::script -> () =></code> changed to <code>function()</code>',
 					'Ensure root authentication is completely disabled when <code>-p</code> or <code>--pass</code> cli arguments are not specified',
-				]
+				],
 			},
 			{
 				time: new Date('2022-07-20'),
@@ -165,7 +236,7 @@ export default class extends Controller {
 					'Enable new <code>--log</code> argument for specifying server log level',
 					'Hide default randomly-generated server password',
 					'Ensure correct version is displayed when running <code>surreal version</code> command',
-				]
+				],
 			},
 			{
 				time: new Date('2022-07-18'),
@@ -183,7 +254,7 @@ export default class extends Controller {
 					'Added a new data type for storing values which should only be computed in the future when selected for output',
 					'Embedded JavaScript functions for writing complex functions and triggers, with runtime context isolation',
 					'Addition of nested GeoJSON data types, including <code>Point</code>, <code>Line</code>, <code>Polygon</code>, <code>MultiPoint</code>, <code>MultiLine</code>, <code>MultiPolygon</code>, and <code>Collection</code> values',
-				]
+				],
 			},
 			{
 				time: new Date('2021-12-14'),
@@ -197,7 +268,7 @@ export default class extends Controller {
 					'Add diff-match-patch functionality when updating document records',
 					'Separate authentication levels for Namespace and Database specific access',
 					'Authentication scope definition and setup, with user-defined authentication logic for each scope',
-				]
+				],
 			},
 			{
 				time: new Date('2021-01-21'),
@@ -211,7 +282,7 @@ export default class extends Controller {
 					'Nested field query notation allowing nested arrays and objects to be queried',
 					'Mathematical operators for complex mathematical calculations in queries',
 					'Advanced functions for working with arrays, strings, time, validation, parsing, and counting',
-				]
+				],
 			},
 			{
 				time: new Date('2019-12-08'),
@@ -225,9 +296,8 @@ export default class extends Controller {
 					'Multi-table, multi-row, serialisable ACID transactions',
 					'Table fields, table change events, table indexes, and data constraints',
 					'Advanced data model including empty values, strings, numbers, objects, arrays, durations, and datetimes',
-				]
+				],
 			},
 		];
 	}
-
 }
