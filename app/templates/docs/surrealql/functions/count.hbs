@@ -51,10 +51,10 @@
 		<Code @name="docs-surrealql-functions-count-3.surql" text="API Definition">
 			count(array) -> number
 		</Code>
-		<p>The following examples show this function, and its output, when used in a select statement:</p>
+		<p>The following examples show this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-count-input-1.surql">
-				SELECT * FROM count();
+				RETURN count();
 			</Code>
 			<Code @name="docs-surrealql-functions-count-result-1.txt">
 				1
@@ -62,7 +62,7 @@
 		</codes>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-count-input-2.surql">
-				SELECT * FROM count(true);
+				RETURN count(true);
 			</Code>
 			<Code @name="docs-surrealql-functions-count-result-2.txt">
 				1
@@ -70,7 +70,7 @@
 		</codes>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-count-input-3.surql">
-				SELECT * FROM count(10 > 15);
+				RETURN count(10 > 15);
 			</Code>
 			<Code @name="docs-surrealql-functions-count-result-3.txt">
 				0
@@ -78,7 +78,7 @@
 		</codes>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-count-input-4.surql">
-				SELECT * FROM count([1, 2, 3, null, 0, false, (15 > 10), rand::uuid()]);
+				RETURN count([ 1, 2, 3, null, 0, false, (15 > 10), rand::uuid() ]);
 			</Code>
 			<Code @name="docs-surrealql-functions-count-result-4.txt">
 				5

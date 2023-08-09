@@ -43,13 +43,13 @@
 		<Code @name="docs-surrealql-functions-sleep.surql" text="API Definition">
 			sleep(duration) -> none
 		</Code>
-		<p>The following examples show this function when used in a select statement:</p>
+		<p>The following examples show this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-sleep-1s.surql">
-				SELECT * FROM sleep(1s);
+				RETURN sleep(1s);
 			</Code>
 			<Code @name="docs-surrealql-functions-sleep-500ms.surql">
-				SELECT * FROM sleep(500ms);
+				RETURN sleep(500ms);
 			</Code>
 		</codes>
 	</Layout::Text>

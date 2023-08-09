@@ -87,10 +87,10 @@
 		<Code @name="docs-surrealql-functions-http-head-2.surql" text="API Definition">
 			http::head(string, object) -> null
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-http-head-input-1.surql">
-				SELECT * FROM http::head('https://surrealdb.com');
+				RETURN http::head('https://surrealdb.com');
 			</Code>
 			<Code @name="docs-surrealql-functions-http-head-result-1.txt">
 				null
@@ -99,7 +99,7 @@
 		<p>To specify custom headers with the HTTP request, pass an object as the second argument:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-http-head-input-2.surql">
-				SELECT * FROM http::head('https://surrealdb.com', {
+				RETURN http::head('https://surrealdb.com', {
 					'x-my-header': 'some unique string'
 				});
 			</Code>
@@ -125,10 +125,10 @@
 		<Code @name="docs-surrealql-functions-http-get-2.surql" text="API Definition">
 			http::get(string, object) -> value
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-http-get-input-1.surql">
-				SELECT * FROM http::get('https://surrealdb.com');
+				RETURN http::get('https://surrealdb.com');
 			</Code>
 			<Code @name="docs-surrealql-functions-http-get-result-1.txt">
 				-- The HTML code is returned
@@ -137,7 +137,7 @@
 		<p>To specify custom headers with the HTTP request, pass an object as the second argument:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-http-get-input-2.surql">
-				SELECT * FROM http::get('https://surrealdb.com', {
+				RETURN http::get('https://surrealdb.com', {
 					'x-my-header': 'some unique string'
 				});
 			</Code>
@@ -163,10 +163,10 @@
 		<Code @name="docs-surrealql-functions-http-put-2.surql" text="API Definition">
 			http::put(string, object, object) -> value
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-http-put-input-1.surql">
-				SELECT * FROM http::put('https://dummyjson.com/comments', {
+				RETURN http::put('https://dummyjson.com/comments', {
 				  "id": 1,
 				  "body": "This is some awesome thinking!",
 				  "postId": 100,
@@ -206,10 +206,10 @@
 		<Code @name="docs-surrealql-functions-http-post-2.surql" text="API Definition">
 			http::post(string, object, object) -> value
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-http-post-input-1.surql">
-				SELECT * FROM http::post('https://dummyjson.com/comments/1', {
+				RETURN http::post('https://dummyjson.com/comments/1', {
 				  "id": 1,
 				  "body": "This is some awesome thinking!",
 				  "postId": 100,
@@ -249,10 +249,10 @@
 		<Code @name="docs-surrealql-functions-http-patch-2.surql" text="API Definition">
 			http::patch(string, object, object) -> value
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-http-patch-input-1.surql">
-				SELECT * FROM http::patch('https://dummyjson.com/comments/1', {
+				RETURN http::patch('https://dummyjson.com/comments/1', {
 				  "id": 1,
 				  "body": "This is some awesome thinking!",
 				  "postId": 100,
@@ -292,10 +292,10 @@
 		<Code @name="docs-surrealql-functions-http-delete-2.surql" text="API Definition">
 			http::delete(string, object) -> value
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-http-delete-input-1.surql">
-				SELECT * FROM http::delete('https://dummyjson.com/comments/1');
+				RETURN http::delete('https://dummyjson.com/comments/1');
 			</Code>
 			<Code @name="docs-surrealql-functions-http-delete-result-1.txt">
 				null
@@ -304,7 +304,7 @@
 		<p>To specify custom headers with the HTTP request, pass an object as the second argument:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-http-delete-input-2.surql">
-				SELECT * FROM http::delete('https://dummyjson.com/comments/1', {
+				RETURN http::delete('https://dummyjson.com/comments/1', {
 					'x-my-header': 'some unique string'
 				});
 			</Code>

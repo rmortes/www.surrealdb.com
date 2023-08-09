@@ -197,7 +197,7 @@
 		<Code @name="docs-surrealql-functions-vector-add.surql" text="API Definition">
 			vector::add(array, array) -> array
 		</Code>
-		<p>The following example shows this function, and its output, when used in a return statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-vector-add-input.surql">
 				RETURN vector::add([1, 2, 3], [1, 2, 3]);
@@ -220,7 +220,7 @@
 		<Code @name="docs-surrealql-functions-vector-angle.surql" text="API Definition">
 			vector::angle(array, array) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a return statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-vector-angle-input.surql">
 				RETURN vector::angle([5, 10, 15], [10, 5, 20]);
@@ -243,7 +243,7 @@
 		<Code @name="docs-surrealql-functions-vector-cross.surql" text="API Definition">
 			vector::cross(array, array) -> array
 		</Code>
-		<p>The following example shows this function, and its output, when used in a return statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-vector-cross-input.surql">
 				RETURN vector::cross([1, 2, 3], [4, 5, 6]);
@@ -266,7 +266,7 @@
 		<Code @name="docs-surrealql-functions-vector-divide.surql" text="API Definition">
 			vector::divide(array, array) -> array
 		</Code>
-		<p>The following example shows this function, and its output, when used in a return statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-vector-divide-input.surql">
 				RETURN vector::divide([10, -20, 30, 0], [0, -1, 2, -3]);
@@ -289,7 +289,7 @@
         <Code @name="docs-surrealql-functions-vector-dot.surql" text="API Definition">
             vector::dot(array, array) -> number
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-dot-input.surql">
                 RETURN vector::dot([1, 2, 3], [1, 2, 3]);
@@ -312,10 +312,10 @@
         <Code @name="docs-surrealql-functions-vector-magnitude.surql" text="API Definition">
             vector::magnitude(array) -> number
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-magnitude-input.surql">
-                RETURN vector::magnitude([1,2,3,3,3,4,5]);
+                RETURN vector::magnitude([ 1, 2, 3, 3, 3, 4, 5 ]);
             </Code>
             <Code @name="docs-surrealql-functions-vector-magnitude-result.txt">
                 8.54400374531753f
@@ -335,7 +335,7 @@
         <Code @name="docs-surrealql-functions-vector-multiply.surql" text="API Definition">
             vector::multiply(array, array) -> number
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-multiply-input.surql">
                 RETURN vector::multiply([1, 2, 3], [1, 2, 3]);
@@ -358,10 +358,10 @@
         <Code @name="docs-surrealql-functions-vector-normalize.surql" text="API Definition">
             vector::normalize(array) -> array
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-normalize-input.surql">
-                RETURN vector::normalize([4,3]);
+                RETURN vector::normalize([ 4, 3 ]);
             </Code>
             <Code @name="docs-surrealql-functions-vector-normalize-result.txt">
                 [0.8f, 0.6f]
@@ -381,7 +381,7 @@
         <Code @name="docs-surrealql-functions-vector-project.surql" text="API Definition">
             vector::project(array) -> array
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-project-input.surql">
                 RETURN vector::project([1, 2, 3], [4, 5, 6]);
@@ -404,7 +404,7 @@
 		<Code @name="docs-surrealql-functions-vector-subtract.surql" text="API Definition">
 			vector::subtract(array, array) -> array
 		</Code>
-		<p>The following example shows this function, and its output, when used in a return statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-vector-subtract-input.surql">
 				RETURN vector::subtract([4, 5, 6], [3, 2, 1]);
@@ -427,7 +427,7 @@
         <Code @name="docs-surrealql-functions-vector-chebyshev.surql" text="API Definition">
             vector::distance::chebyshev(array, array) -> number
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-chebyshev-input.surql">
                 RETURN vector::distance::chebyshev([2, 4, 5, 3, 8, 2], [3, 1, 5, -3, 7, 2]);
@@ -450,7 +450,7 @@
         <Code @name="docs-surrealql-functions-vector-euclidean.surql" text="API Definition">
             vector::distance::euclidean(array, array) -> number
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-euclidean-input.surql">
                 RETURN vector::distance::euclidean([10, 50, 200], [400, 100, 20]);
@@ -473,7 +473,7 @@
         <Code @name="docs-surrealql-functions-vector-hamming.surql" text="API Definition">
             vector::distance::hamming(array, array) -> number
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-hamming-input.surql">
                 RETURN vector::distance::hamming([1, 2, 2], [1, 2, 3]);
@@ -498,7 +498,7 @@
         <Code @name="docs-surrealql-functions-vector-manhattan.surql" text="API Definition">
             vector::distance::manhattan(array, array) -> number
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-manhattan-input.surql">
                 RETURN vector::distance::manhattan([10, 20, 15, 10, 5], [12, 24, 18, 8, 7]);
@@ -524,7 +524,7 @@
         <Code @name="docs-surrealql-functions-vector-minkowski.surql" text="API Definition">
             vector::distance::minkowski(array, array, number) -> number
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-minkowski-input.surql">
                 RETURN vector::distance::minkowski([10, 20, 15, 10, 5], [12, 24, 18, 8, 7], 3);
@@ -549,7 +549,7 @@
         <Code @name="docs-surrealql-functions-vector-cosine.surql" text="API Definition">
             vector::similarity::cosine(array, array) -> number
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-cosine-input.surql">
                 RETURN vector::similarity::cosine([10, 50, 200], [400, 100, 20]);
@@ -574,7 +574,7 @@
         <Code @name="docs-surrealql-functions-vector-jaccard.surql" text="API Definition">
             vector::similarity::jaccard(array, array) -> number
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-jaccard-input.surql">
                 RETURN vector::similarity::jaccard([0,1,2,5,6], [0,2,3,4,5,7,9]);
@@ -599,7 +599,7 @@
         <Code @name="docs-surrealql-functions-vector-pearson.surql" text="API Definition">
             vector::similarity::pearson(array, array) -> number
         </Code>
-        <p>The following example shows this function, and its output, when used in a return statement:</p>
+        <p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
         <codes vertical>
             <Code @name="docs-surrealql-functions-vector-pearson-input.surql">
                 RETURN vector::similarity::pearson([1,2,3], [1,5,7]);

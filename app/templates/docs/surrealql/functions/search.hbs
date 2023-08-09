@@ -59,7 +59,7 @@
 		<Code @name="docs-surrealql-functions-search-score.surql" text="API Definition">
 				search::score(number) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-search-score-input.surql">
 				SELECT id, title, search::score(1) AS score FROM book
@@ -90,7 +90,7 @@
 		<Code @name="docs-surrealql-functions-search-highlight.surql" text="API Definition">
 				search::highlight(string, string, number) -> string | string[]
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-search-highlight-input.surql">
 				SELECT id, search::highlight('<b>', '</b>', 1) AS title
@@ -119,7 +119,7 @@
 		<Code @name="docs-surrealql-functions-search-offsets.surql" text="API Definition">
 				search::offsets(number) -> object
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-search-offsets-input.surql">
 				SELECT id, title, search::offsets(1) AS title_offsets

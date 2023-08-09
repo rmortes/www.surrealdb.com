@@ -219,10 +219,10 @@
 		<Code @name="docs-surrealql-functions-time-day.surql" text="API Definition">
 			time::day(datetime) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-day-input.surql">
-				SELECT * FROM time::day("2021-11-01T08:30:17+00:00");
+				RETURN time::day("2021-11-01T08:30:17+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-day-result.txt">
 				1
@@ -242,10 +242,10 @@
 		<Code @name="docs-surrealql-functions-time-floor.surql" text="API Definition">
 			time::floor(datetime, duration) -> datetime
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-floor-input.surql">
-				SELECT * FROM time::floor("2021-11-01T08:30:17+00:00", 1w);
+				RETURN time::floor("2021-11-01T08:30:17+00:00", 1w);
 			</Code>
 			<Code @name="docs-surrealql-functions-time-floor-result.txt">
 				"2021-10-28T00:00:00Z"
@@ -265,10 +265,10 @@
 		<Code @name="docs-surrealql-functions-time-format.surql" text="API Definition">
 			time::format(datetime, string) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-format-input.surql">
-				SELECT * FROM time::format("2021-11-01T08:30:17+00:00", "%Y-%m-%d");
+				RETURN time::format("2021-11-01T08:30:17+00:00", "%Y-%m-%d");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-format-result.txt">
 				"2021-11-01"
@@ -292,10 +292,10 @@
 		<Code @name="docs-surrealql-functions-time-group.surql" text="API Definition">
 			time::group(datetime, string) -> datetime
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-group-input.surql">
-				SELECT * FROM time::group("2021-11-01T08:30:17+00:00", "year");
+				RETURN time::group("2021-11-01T08:30:17+00:00", "year");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-group-result.txt">
 				"2021-01-01T00:00:00Z"
@@ -315,10 +315,10 @@
 		<Code @name="docs-surrealql-functions-time-hour.surql" text="API Definition">
 			time::hour(datetime) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-hour-input.surql">
-				SELECT * FROM time::hour("2021-11-01T08:30:17+00:00");
+				RETURN time::hour("2021-11-01T08:30:17+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-hour-result.txt">
 				8
@@ -338,10 +338,10 @@
 		<Code @name="docs-surrealql-functions-time-max.surql" text="API Definition">
 			time::max(array) -> datetime
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-max-input.surql">
-				SELECT * FROM time::max(["1987-06-22T08:30:45Z", "1988-06-22T08:30:45Z"])
+				RETURN time::max([ "1987-06-22T08:30:45Z", "1988-06-22T08:30:45Z" ])
 			</Code>
 			<Code @name="docs-surrealql-functions-time-max-result.txt">
 				"1988-06-22T08:30:45Z"
@@ -361,10 +361,10 @@
 		<Code @name="docs-surrealql-functions-time-min.surql" text="API Definition">
 			time::min(array) -> datetime
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-min-input.surql">
-				SELECT * FROM time::min(["1987-06-22T08:30:45Z", "1988-06-22T08:30:45Z"])
+				RETURN time::min([ "1987-06-22T08:30:45Z", "1988-06-22T08:30:45Z" ])
 			</Code>
 			<Code @name="docs-surrealql-functions-time-min-result.txt">
 				"1987-06-22T08:30:45Z"
@@ -384,10 +384,10 @@
 		<Code @name="docs-surrealql-functions-time-minute.surql" text="API Definition">
 			time::minute(datetime) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-minute-input.surql">
-				SELECT * FROM time::minute("2021-11-01T08:30:17+00:00");
+				RETURN time::minute("2021-11-01T08:30:17+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-minute-result.txt">
 				30
@@ -407,10 +407,10 @@
 		<Code @name="docs-surrealql-functions-time-month.surql" text="API Definition">
 			time::month(datetime) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-month-input.surql">
-				SELECT * FROM time::month("2021-11-01T08:30:17+00:00");
+				RETURN time::month("2021-11-01T08:30:17+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-month-result.txt">
 				11
@@ -430,10 +430,10 @@
 		<Code @name="docs-surrealql-functions-time-nano.surql" text="API Definition">
 			time::nano(datetime) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-nano-input.surql">
-				SELECT * FROM time::nano("2021-11-01T08:30:17+00:00");
+				RETURN time::nano("2021-11-01T08:30:17+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-nano-result.txt">
 				1635755417000000000
@@ -467,10 +467,10 @@
 		<Code @name="docs-surrealql-functions-time-round.surql" text="API Definition">
 			time::round(datetime, duration) -> datetime
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-round-input.surql">
-				SELECT * FROM time::round("2021-11-01T08:30:17+00:00", 1w);
+				RETURN time::round("2021-11-01T08:30:17+00:00", 1w);
 			</Code>
 			<Code @name="docs-surrealql-functions-time-round-result.txt">
 				"2021-11-04T00:00:00Z"
@@ -490,10 +490,10 @@
 		<Code @name="docs-surrealql-functions-time-second.surql" text="API Definition">
 			time::second(datetime) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-second-input.surql">
-				SELECT * FROM time::second("2021-11-01T08:30:17+00:00");
+				RETURN time::second("2021-11-01T08:30:17+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-second-result.txt">
 				17
@@ -527,10 +527,10 @@
 		<Code @name="docs-surrealql-functions-time-unix.surql" text="API Definition">
 			time::unix(datetime) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-unix-input.surql">
-				SELECT * FROM time::unix("2021-11-01T08:30:17+00:00");
+				RETURN time::unix("2021-11-01T08:30:17+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-unix-result.txt">
 				1635755417
@@ -550,10 +550,10 @@
 		<Code @name="docs-surrealql-functions-time-wday.surql" text="API Definition">
 			time::wday(datetime) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-wday-input.surql">
-				SELECT * FROM time::wday("2021-11-01T08:30:17+00:00");
+				RETURN time::wday("2021-11-01T08:30:17+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-wday-result.txt">
 				1
@@ -573,10 +573,10 @@
 		<Code @name="docs-surrealql-functions-time-week.surql" text="API Definition">
 			time::week(datetime) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-week-input.surql">
-				SELECT * FROM time::week("2021-11-01T08:30:17+00:00");
+				RETURN time::week("2021-11-01T08:30:17+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-week-result.txt">
 				44
@@ -596,10 +596,10 @@
 		<Code @name="docs-surrealql-functions-time-yday.surql" text="API Definition">
 			time::yday(datetime) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-yday-input.surql">
-				SELECT * FROM time::yday("2021-11-01T08:30:17+00:00");
+				RETURN time::yday("2021-11-01T08:30:17+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-yday-result.txt">
 				305
@@ -619,10 +619,10 @@
 		<Code @name="docs-surrealql-functions-time-year.surql" text="API Definition">
 			time::year(datetime) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-year-input.surql">
-				SELECT * FROM time::year("2021-11-01T08:30:17+00:00");
+				RETURN time::year("2021-11-01T08:30:17+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-time-year-result.txt">
 				2021
@@ -642,10 +642,10 @@
 		<Code @name="docs-surrealql-functions-time-micros.surql" text="API Definition">
 			time::from::micros(number) -> datetime
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-micros-input.surql">
-				SELECT * FROM time::from::micros(1000000);
+				RETURN time::from::micros(1000000);
 			</Code>
 			<Code @name="docs-surrealql-functions-time-micros-result.txt">
 				"1970-01-01T00:00:01Z"
@@ -665,10 +665,10 @@
 		<Code @name="docs-surrealql-functions-time-millis.surql" text="API Definition">
 			time::from::millis(number) -> datetime
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-millis-input.surql">
-				SELECT * FROM time::from::millis(1000);
+				RETURN time::from::millis(1000);
 			</Code>
 			<Code @name="docs-surrealql-functions-time-millis-result.txt">
 				"1970-01-01T00:00:01Z"
@@ -688,10 +688,10 @@
 		<Code @name="docs-surrealql-functions-time-secs.surql" text="API Definition">
 			time::from::secs(number) -> datetime
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-secs-input.surql">
-				SELECT * FROM time::from::secs(1000);
+				RETURN time::from::secs(1000);
 			</Code>
 			<Code @name="docs-surrealql-functions-time-secs-result.txt">
 				"1970-01-01T00:16:40Z"
@@ -711,10 +711,10 @@
 		<Code @name="docs-surrealql-functions-time-unix.surql" text="API Definition">
 			time::from::unix(number) -> datetime
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-time-unix-input.surql">
-				SELECT * FROM time::from::unix(1000);
+				RETURN time::from::unix(1000);
 			</Code>
 			<Code @name="docs-surrealql-functions-time-unix-result.txt">
 				"1970-01-01T00:16:40Z"

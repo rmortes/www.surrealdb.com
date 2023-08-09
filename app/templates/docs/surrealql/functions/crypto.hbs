@@ -131,10 +131,10 @@
 		<Code @name="docs-surrealql-functions-crypto-md5.surql" text="API Definition">
 			crypto::md5(any) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-md5-input.surql">
-				SELECT * FROM crypto::md5("tobie");
+				RETURN crypto::md5("tobie");
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-md5-result.txt">
 				"4768b3fc7ac751e03a614e2349abf3bf"
@@ -154,10 +154,10 @@
 		<Code @name="docs-surrealql-functions-crypto-sha1.surql" text="API Definition">
 			crypto::sha1(any) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-sha1-input.surql">
-				SELECT * FROM crypto::sha1("tobie");
+				RETURN crypto::sha1("tobie");
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-sha1-result.txt">
 				"c6be709a1b6429472e0c5745b411f1693c4717be"
@@ -177,10 +177,10 @@
 		<Code @name="docs-surrealql-functions-crypto-sha256.surql" text="API Definition">
 			crypto::sha256(any) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-sha256-input.surql">
-				SELECT * FROM crypto::sha256("tobie");
+				RETURN crypto::sha256("tobie");
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-sha256-result.txt">
 				"33fe1859daba927ea5674813adc1cf34b9e2795f2b7e91602fae19c0d0c493af"
@@ -200,10 +200,10 @@
 		<Code @name="docs-surrealql-functions-crypto-sha512.surql" text="API Definition">
 			crypto::sha512(any) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-sha512-input.surql">
-				SELECT * FROM crypto::sha512("tobie");
+				RETURN crypto::sha512("tobie");
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-sha512-result.txt">
 				"39f0160c946c4c53702112d6ef3eea7957ea8e1c78787a482a89f8b0a8860a20ecd543432e4a187d9fdcd1c415cf61008e51a7e8bf2f22ac77e458789c9cdccc"
@@ -223,12 +223,12 @@
 		<Code @name="docs-surrealql-functions-crypto-argon2-compare.surql" text="API Definition">
 			crypto::argon2::compare(string, any) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-argon2-compare-input.surql">
 				LET $hash = "$argon2id$v=19$m=4096,t=3,p=1$pbZ6yJ2rPJKk4pyEMVwslQ$jHzpsiB+3S/H+kwFXEcr10vmOiDkBkydVCSMfRxV7CA";
 				LET $pass = "this is a strong password";
-				SELECT * FROM crypto::argon2::compare($hash, $pass);
+				RETURN crypto::argon2::compare($hash, $pass);
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-argon2-compare-result.txt">
 				true
@@ -248,10 +248,10 @@
 		<Code @name="docs-surrealql-functions-crypto-argon2-generate.surql" text="API Definition">
 			crypto::argon2::generate(any) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-argon2-generate-input.surql">
-				SELECT * FROM crypto::argon2::generate("this is a strong password");
+				RETURN crypto::argon2::generate("this is a strong password");
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-argon2-generate-result.txt">
 				"$argon2id$v=19$m=4096,t=3,p=1$pbZ6yJ2rPJKk4pyEMVwslQ$jHzpsiB+3S/H+kwFXEcr10vmOiDkBkydVCSMfRxV7CA"
@@ -271,12 +271,12 @@
 		<Code @name="docs-surrealql-functions-crypto-bcrypt-compare.surql" text="API Definition">
 			crypto::bcrypt::compare(string, any) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-bcrypt-compare-input.surql">
 				LET $hash = "$2b$12$OD7hrr1Hycyk8NUwOekYY.cogCICpUnwNvDZ9NiC1qCPHzpVAQ9BO";
 				LET $pass = "this is a strong password";
-				SELECT * FROM crypto::bcrypt::compare($hash, $pass);
+				RETURN crypto::bcrypt::compare($hash, $pass);
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-bcrypt-compare-result.txt">
 				true
@@ -296,10 +296,10 @@
 		<Code @name="docs-surrealql-functions-crypto-bcrypt-generate.surql" text="API Definition">
 			crypto::bcrypt::generate(any) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-bcrypt-generate-input.surql">
-				SELECT * FROM crypto::bcrypt::generate("this is a strong password");
+				RETURN crypto::bcrypt::generate("this is a strong password");
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-bcrypt-generate-result.txt">
 				"$2b$12$OD7hrr1Hycyk8NUwOekYY.cogCICpUnwNvDZ9NiC1qCPHzpVAQ9BO"
@@ -319,12 +319,12 @@
 		<Code @name="docs-surrealql-functions-crypto-pbkdf2-compare.surql" text="API Definition">
 			crypto::pbkdf2::compare(string, any) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-pbkdf2-compare-input.surql">
 				LET $hash = "$pbkdf2-sha256$i=10000,l=32$DBURRPJODKEt0IId1Lqe+w$Ve8Z00mibHDSKLbyKTceEBBcDpGoK0AEUl7QzDTIec4";
 				LET $pass = "this is a strong password";
-				SELECT * FROM crypto::pbkdf2::compare($hash, $pass);
+				RETURN crypto::pbkdf2::compare($hash, $pass);
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-pbkdf2-compare-result.txt">
 				true
@@ -344,10 +344,10 @@
 		<Code @name="docs-surrealql-functions-crypto-pbkdf2-generate.surql" text="API Definition">
 			crypto::pbkdf2::generate(any) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-pbkdf2-generate-input.surql">
-				SELECT * FROM crypto::pbkdf2::generate("this is a strong password");
+				RETURN crypto::pbkdf2::generate("this is a strong password");
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-pbkdf2-generate-result.txt">
 				"$pbkdf2-sha256$i=10000,l=32$DBURRPJODKEt0IId1Lqe+w$Ve8Z00mibHDSKLbyKTceEBBcDpGoK0AEUl7QzDTIec4"
@@ -367,12 +367,12 @@
 		<Code @name="docs-surrealql-functions-crypto-scrypt-compare.surql" text="API Definition">
 			crypto::scrypt::compare(string, any) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-scrypt-compare-input.surql">
 				LET $hash = "$scrypt$ln=15,r=8,p=1$8gl7bipl0FELTy46YJOBrw$eRcS1qR22GI8VHo58WOXn9JyfDivGo5yTJFvpDyivuw";
 				LET $pass = "this is a strong password";
-				SELECT * FROM crypto::scrypt::compare($hash, $pass);
+				RETURN crypto::scrypt::compare($hash, $pass);
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-scrypt-compare-result.txt">
 				true
@@ -392,10 +392,10 @@
 		<Code @name="docs-surrealql-functions-crypto-scrypt-generate.surql" text="API Definition">
 			crypto::scrypt::generate(any) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-crypto-scrypt-generate-input.surql">
-				SELECT * FROM crypto::scrypt::generate("this is a strong password");
+				RETURN crypto::scrypt::generate("this is a strong password");
 			</Code>
 			<Code @name="docs-surrealql-functions-crypto-scrypt-generate-result.txt">
 				"$scrypt$ln=15,r=8,p=1$8gl7bipl0FELTy46YJOBrw$eRcS1qR22GI8VHo58WOXn9JyfDivGo5yTJFvpDyivuw"

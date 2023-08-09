@@ -267,10 +267,10 @@
 		<Code @name="docs-surrealql-functions-string-concat.surql" text="API Definition">
 			string::concat(string...) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-concat-input.surql">
-				SELECT * FROM string::concat('this', ' ', 'is', ' ', 'a', ' ', 'test');
+				RETURN string::concat('this', ' ', 'is', ' ', 'a', ' ', 'test');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-concat-result.txt">
 				"this is a test"
@@ -290,10 +290,10 @@
 		<Code @name="docs-surrealql-functions-string-contains.surql" text="API Definition">
 			string::contains(string, string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-contains-input.surql">
-				SELECT * FROM string::contains('abcdefg', 'cde');
+				RETURN string::contains('abcdefg', 'cde');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-contains-result.txt">
 				true
@@ -313,10 +313,10 @@
 		<Code @name="docs-surrealql-functions-string-endsWith.surql" text="API Definition">
 			string::endsWith(string, string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-endsWith-input.surql">
-				SELECT * FROM string::endsWith('some test', 'test');
+				RETURN string::endsWith('some test', 'test');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-endsWith-result.txt">
 				true
@@ -336,10 +336,10 @@
 		<Code @name="docs-surrealql-functions-string-join.surql" text="API Definition">
 			string::join(string, string...) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-join-input.surql">
-				SELECT * FROM string::join(', ', 'a', 'list', 'of', 'items');
+				RETURN string::join(', ', 'a', 'list', 'of', 'items');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-join-result.txt">
 				"a, list, of, items"
@@ -359,10 +359,10 @@
 		<Code @name="docs-surrealql-functions-string-len.surql" text="API Definition">
 			string::len(string) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-len-input.surql">
-				SELECT * FROM string::len('this is a test');
+				RETURN string::len('this is a test');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-len-result.txt">
 				14
@@ -382,10 +382,10 @@
 		<Code @name="docs-surrealql-functions-string-lowercase.surql" text="API Definition">
 			string::lowercase(string) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-lowercase-input.surql">
-				SELECT * FROM string::lowercase('THIS IS A TEST');
+				RETURN string::lowercase('THIS IS A TEST');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-lowercase-result.txt">
 				"this is a test"
@@ -405,10 +405,10 @@
 		<Code @name="docs-surrealql-functions-string-repeat.surql" text="API Definition">
 			string::repeat(string, number) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-repeat-input.surql">
-				SELECT * FROM string::repeat('test', 3);
+				RETURN string::repeat('test', 3);
 			</Code>
 			<Code @name="docs-surrealql-functions-string-repeat-result.txt">
 				"testtesttest"
@@ -428,10 +428,10 @@
 		<Code @name="docs-surrealql-functions-string-replace.surql" text="API Definition">
 			string::replace(string, string, string) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-replace-input.surql">
-				SELECT * FROM string::replace('this is a test', 'a test', 'awesome');
+				RETURN string::replace('this is a test', 'a test', 'awesome');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-replace-result.txt">
 				"this is awesome"
@@ -451,10 +451,10 @@
 		<Code @name="docs-surrealql-functions-string-reverse.surql" text="API Definition">
 			string::reverse(string) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-reverse-input.surql">
-				SELECT * FROM string::reverse('this is a test');
+				RETURN string::reverse('this is a test');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-reverse-result.txt">
 				"tset a si siht"
@@ -474,10 +474,10 @@
 		<Code @name="docs-surrealql-functions-string-slice.surql" text="API Definition">
 			string::slice(string, number, number) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-slice-input.surql">
-				SELECT * FROM string::slice('this is a test', 10, 4);
+				RETURN string::slice('this is a test', 10, 4);
 			</Code>
 			<Code @name="docs-surrealql-functions-string-slice-result.txt">
 				"test"
@@ -497,10 +497,10 @@
 		<Code @name="docs-surrealql-functions-string-slug.surql" text="API Definition">
 			string::slug(string) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-slug-input.surql">
-				SELECT * FROM string::slug('SurrealDB has launched #database #awesome');
+				RETURN string::slug('SurrealDB has launched #database #awesome');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-slug-result.txt">
 				"surrealdb-has-launched-database-awesome"
@@ -520,10 +520,10 @@
 		<Code @name="docs-surrealql-functions-string-split.surql" text="API Definition">
 			string::split(string, string) -> array
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-split-input.surql">
-				SELECT * FROM string::split('this, is, a, list', ', ');
+				RETURN string::split('this, is, a, list', ', ');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-split-result.txt">
 				["this", "is", "a", "list"]
@@ -543,10 +543,10 @@
 		<Code @name="docs-surrealql-functions-string-startsWith.surql" text="API Definition">
 			string::startsWith(string, string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-startsWith-input.surql">
-				SELECT * FROM string::startsWith('some test', 'some');
+				RETURN string::startsWith('some test', 'some');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-startsWith-result.txt">
 				true
@@ -566,10 +566,10 @@
 		<Code @name="docs-surrealql-functions-string-trim.surql" text="API Definition">
 			string::trim(string) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-trim-input.surql">
-				SELECT * FROM string::trim('    this is a test    ');
+				RETURN string::trim('    this is a test    ');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-trim-result.txt">
 				"this is a test"
@@ -589,10 +589,10 @@
 		<Code @name="docs-surrealql-functions-string-uppercase.surql" text="API Definition">
 			string::uppercase(string) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-uppercase-input.surql">
-				SELECT * FROM string::uppercase('this is a test');
+				RETURN string::uppercase('this is a test');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-uppercase-result.txt">
 				"THIS IS A TEST"
@@ -612,10 +612,10 @@
 		<Code @name="docs-surrealql-functions-string-words.surql" text="API Definition">
 			string::words(string) -> array
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-string-words-input.surql">
-				SELECT * FROM string::words('this is a test');
+				RETURN string::words('this is a test');
 			</Code>
 			<Code @name="docs-surrealql-functions-string-words-result.txt">
 				["this", "is", "a", "test"]
@@ -635,10 +635,10 @@
 		<Code @name="docs-surrealql-functions-is-alphanum.surql" text="API Definition">
 			string::is_alphanum(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-alphanum-input.surql">
-				SELECT * FROM string::is_alphanum("ABC123");
+				RETURN string::is_alphanum("ABC123");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-alphanum-result.txt">
 				true
@@ -658,10 +658,10 @@
 		<Code @name="docs-surrealql-functions-is-alpha.surql" text="API Definition">
 			string::is_alpha(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-alpha-input.surql">
-				SELECT * FROM string::is_alpha("ABCDEF");
+				RETURN string::is_alpha("ABCDEF");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-alpha-result.txt">
 				true
@@ -681,10 +681,10 @@
 		<Code @name="docs-surrealql-functions-is-ascii.surql" text="API Definition">
 			string::is_ascii(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-ascii-input.surql">
-				SELECT * FROM string::is_ascii("ABC123");
+				RETURN string::is_ascii("ABC123");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-ascii-result.txt">
 				true
@@ -704,10 +704,10 @@
 		<Code @name="docs-surrealql-functions-is-format.surql" text="API Definition">
 			string::is_format(string, string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-format-input.surql">
-				SELECT * FROM string::is_format("2015-09-05 23:56:04", "%Y-%m-%d %H:%M:%S");
+				RETURN string::is_format("2015-09-05 23:56:04", "%Y-%m-%d %H:%M:%S");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-format-result.txt">
 				true
@@ -731,10 +731,10 @@
 		<Code @name="docs-surrealql-functions-is-domain.surql" text="API Definition">
 			string::is_domain(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-domain-input.surql">
-				SELECT * FROM string::is_domain("surrealdb.com");
+				RETURN string::is_domain("surrealdb.com");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-domain-result.txt">
 				true
@@ -754,10 +754,10 @@
 		<Code @name="docs-surrealql-functions-is-email.surql" text="API Definition">
 			string::is_email(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-email-input.surql">
-				SELECT * FROM string::is_email("info@surrealdb.com");
+				RETURN string::is_email("info@surrealdb.com");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-email-result.txt">
 				true
@@ -777,10 +777,10 @@
 		<Code @name="docs-surrealql-functions-is-hexadecimal.surql" text="API Definition">
 			string::is_hexadecimal(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-hexadecimal-input.surql">
-				SELECT * FROM string::is_hexadecimal("ff009e");
+				RETURN string::is_hexadecimal("ff009e");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-hexadecimal-result.txt">
 				true
@@ -800,10 +800,10 @@
 		<Code @name="docs-surrealql-functions-is-latitude.surql" text="API Definition">
 			string::is_latitude(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-latitude-input.surql">
-				SELECT * FROM string::is_latitude("-0.118092");
+				RETURN string::is_latitude("-0.118092");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-latitude-result.txt">
 				true
@@ -823,10 +823,10 @@
 		<Code @name="docs-surrealql-functions-is-longitude.surql" text="API Definition">
 			string::is_longitude(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-longitude-input.surql">
-				SELECT * FROM string::is_longitude("51.509865");
+				RETURN string::is_longitude("51.509865");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-longitude-result.txt">
 				true
@@ -846,10 +846,10 @@
 		<Code @name="docs-surrealql-functions-is-numeric.surql" text="API Definition">
 			string::is_numeric(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-numeric-input.surql">
-				SELECT * FROM string::is_numeric("1484091748");
+				RETURN string::is_numeric("1484091748");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-numeric-result.txt">
 				true
@@ -869,10 +869,10 @@
 		<Code @name="docs-surrealql-functions-is-semver.surql" text="API Definition">
 			string::is_semver(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-semver-input.surql">
-				SELECT * FROM string::is_semver("1.0.0");
+				RETURN string::is_semver("1.0.0");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-semver-result.txt">
 				true
@@ -892,10 +892,10 @@
 		<Code @name="docs-surrealql-functions-is-url.surql" text="API Definition">
 			string::is_url(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-url-input.surql">
-				SELECT * FROM string::is_url("https://surrealdb.com");
+				RETURN string::is_url("https://surrealdb.com");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-url-result.txt">
 				true
@@ -915,10 +915,10 @@
 		<Code @name="docs-surrealql-functions-is-uuid.surql" text="API Definition">
 			string::is_uuid(string) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-is-uuid-input.surql">
-				SELECT * FROM string::is_uuid("ad55cae8-cf02-47ee-92a7-e137fb644a84");
+				RETURN string::is_uuid("ad55cae8-cf02-47ee-92a7-e137fb644a84");
 			</Code>
 			<Code @name="docs-surrealql-functions-is-uuid-result.txt">
 				true

@@ -131,10 +131,10 @@
 		<Code @name="docs-surrealql-functions-type-bool.surql" text="API Definition">
 			type::bool(any) -> bool
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-bool-input.surql">
-				SELECT * FROM type::bool(12345);
+				RETURN type::bool(12345);
 			</Code>
 			<Code @name="docs-surrealql-functions-type-bool-result.txt">
 				true
@@ -155,10 +155,10 @@
 		<Code @name="docs-surrealql-functions-type-datetime.surql" text="API Definition">
 			type::datetime(any) -> datetime
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-datetime-input.surql">
-				SELECT * FROM type::datetime("2022-04-27T18:12:27+00:00");
+				RETURN type::datetime("2022-04-27T18:12:27+00:00");
 			</Code>
 			<Code @name="docs-surrealql-functions-type-datetime-result.txt">
 				"2022-04-27T18:12:27Z"
@@ -179,13 +179,13 @@
 		<Code @name="docs-surrealql-functions-type-decimal.surql" text="API Definition">
 			type::decimal(any) -> decimal
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-decimal-input.surql">
-				SELECT * FROM type::decimal("12345");
+				RETURN type::decimal("12345");
 			</Code>
 			<Code @name="docs-surrealql-functions-type-decimal-result.txt">
-				"12345"
+				12345.00
 			</Code>
 		</codes>
 		<p>This is the equivalent of using <Link @link="docs.surrealql.datamodel.casting"><code>&lt;decimal&gt;</code></Link> to cast a value to a decimal.</p>
@@ -203,13 +203,13 @@
 		<Code @name="docs-surrealql-functions-type-duration.surql" text="API Definition">
 			type::duration(any) -> duration
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-duration-input.surql">
-				SELECT * FROM type::duration("4h");
+				RETURN type::duration("4h");
 			</Code>
 			<Code @name="docs-surrealql-functions-type-duration-result.txt">
-				"4h"
+				4h
 			</Code>
 		</codes>
 		<p>This is the equivalent of using <Link @link="docs.surrealql.datamodel.casting"><code>&lt;duration&gt;</code></Link> to cast a value to a duration.</p>
@@ -227,10 +227,10 @@
 		<Code @name="docs-surrealql-functions-type-float.surql" text="API Definition">
 			type::float(any) -> float
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-float-input.surql">
-				SELECT * FROM type::float("12345");
+				RETURN type::float("12345");
 			</Code>
 			<Code @name="docs-surrealql-functions-type-float-result.txt">
 				12345.0
@@ -251,10 +251,10 @@
 		<Code @name="docs-surrealql-functions-type-int.surql" text="API Definition">
 			type::int(any) -> int
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-int-input.surql">
-				SELECT * FROM type::int("12345");
+				RETURN type::int("12345");
 			</Code>
 			<Code @name="docs-surrealql-functions-type-int-result.txt">
 				12345
@@ -275,13 +275,13 @@
 		<Code @name="docs-surrealql-functions-type-number.surql" text="API Definition">
 			type::number(any) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-number-input.surql">
-				SELECT * FROM type::number("12345");
+				RETURN type::number("12345");
 			</Code>
 			<Code @name="docs-surrealql-functions-type-number-result.txt">
-				"12345"
+				12345
 			</Code>
 		</codes>
 		<p>This is the equivalent of using <Link @link="docs.surrealql.datamodel.casting"><code>&lt;number&gt;</code></Link> to cast a value to a number.</p>
@@ -303,10 +303,10 @@
 		<Code @name="docs-surrealql-functions-type-point-2.surql" text="API Definition">
 			type::point(number, number) -> point
 		</Code>
-		<p>The following examples show this function, and its output, when used in a select statement:</p>
+		<p>The following examples show this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-point-input-2.surql">
-				SELECT * FROM type::point(51.509865, -0.118092);
+				RETURN type::point(51.509865, -0.118092);
 			</Code>
 			<Code @name="docs-surrealql-functions-type-point-result-2.txt">
 				{
@@ -320,7 +320,7 @@
 		</codes>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-point-input-1.surql">
-				SELECT * FROM type::point([51.509865, -0.118092]);
+				RETURN type::point([ 51.509865, -0.118092 ]);
 			</Code>
 			<Code @name="docs-surrealql-functions-type-point-result-1.txt">
 				{
@@ -346,10 +346,10 @@
 		<Code @name="docs-surrealql-functions-array-regex.surql" text="API Definition">
 			type::regex(any) -> regex
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-regex-input.surql">
-				SELECT * FROM type::regex("/[A-Z]{3}/");
+				RETURN type::regex("/[A-Z]{3}/");
 			</Code>
 			<Code @name="docs-surrealql-functions-type-regex-result.txt">
 				FIXME
@@ -369,10 +369,10 @@
 		<Code @name="docs-surrealql-functions-array-string.surql" text="API Definition">
 			type::string(any) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-string-input.surql">
-				SELECT * FROM type::string(12345);
+				RETURN type::string(12345);
 			</Code>
 			<Code @name="docs-surrealql-functions-type-string-result.txt">
 				"12345"
@@ -393,11 +393,11 @@
 		<Code @name="docs-surrealql-functions-array-table.surql" text="API Definition">
 			type::table(any) -> table
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-table-input.surql">
 				LET $table = "person";
-				SELECT * FROM type::table($table);
+				RETURN type::table($table);
 			</Code>
 		</codes>
 	</Layout::Text>
@@ -414,12 +414,12 @@
 		<Code @name="docs-surrealql-functions-array-thing.surql" text="API Definition">
 			type::thing(any, any) -> thing
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-type-thing-input.surql">
 				LET $tb = "person";
 				LET $id = "tobie";
-				SELECT * FROM type::thing($tb, $id);
+				RETURN type::thing($tb, $id);
 			</Code>
 		</codes>
 	</Layout::Text>

@@ -83,10 +83,10 @@
 		<Code @name="docs-surrealql-functions-geo-area.surql" text="API Definition">
 			geo::area(geometry) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-geo-area-input.surql">
-				SELECT * FROM geo::area({
+				RETURN geo::area({
 					type: "Polygon",
 					coordinates: [[
 						[-0.38314819, 51.37692386], [0.1785278, 51.37692386],
@@ -102,7 +102,7 @@
 		<p>If the argument is not a geometry type, then an <Link @link="docs.surrealql.datamodel.simple"><code>EMPTY</code></Link> value will be returned:</p>
         <codes vertical>
 			<Code @name="docs-surrealql-functions-geo-area-error-input.surql">
-				SELECT * FROM geo::area(12345);
+				RETURN geo::area(12345);
 			</Code>
 			<Code @name="docs-surrealql-functions-geo-area-error-result.txt">
 				null
@@ -122,10 +122,10 @@
 		<Code @name="docs-surrealql-functions-geo-bearing.surql" text="API Definition">
 			geo::bearing(point, point) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-geo-bearing-input.surql">
-				SELECT * FROM geo::bearing( (51.509865, -0.118092), (-0.118092, 51.509865) );
+				RETURN geo::bearing( (51.509865, -0.118092), (-0.118092, 51.509865) );
 			</Code>
 			<Code @name="docs-surrealql-functions-geo-bearing-result.txt">
 				-31.913259585079818
@@ -134,7 +134,7 @@
 		<p>If either argument is not a geolocation point, then an <Link @link="docs.surrealql.datamodel.simple"><code>EMPTY</code></Link> value will be returned:</p>
         <codes vertical>
 			<Code @name="docs-surrealql-functions-geo-bearing-error-input.surql">
-				SELECT * FROM geo::bearing(12345, true);
+				RETURN geo::bearing(12345, true);
 			</Code>
 			<Code @name="docs-surrealql-functions-geo-bearing-error-result.txt">
 				null
@@ -154,10 +154,10 @@
 		<Code @name="docs-surrealql-functions-geo-centroid.surql" text="API Definition">
 			geo::centroid(geometry) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-geo-centroid-input.surql">
-				SELECT * FROM geo::centroid({
+				RETURN geo::centroid({
 					type: "Polygon",
 					coordinates: [[
 						[-0.38314819, 51.37692386], [0.1785278, 51.37692386],
@@ -179,7 +179,7 @@
 		<p>If either argument is not a geometry type, then an <Link @link="docs.surrealql.datamodel.simple"><code>EMPTY</code></Link> value will be returned:</p>
         <codes vertical>
 			<Code @name="docs-surrealql-functions-geo-centroid-error-input.surql">
-				SELECT * FROM geo::centroid(12345);
+				RETURN geo::centroid(12345);
 			</Code>
 			<Code @name="docs-surrealql-functions-geo-centroid-error-result.txt">
 				null
@@ -199,10 +199,10 @@
 		<Code @name="docs-surrealql-functions-geo-distance.surql" text="API Definition">
 			geo::distance(point, point) -> number
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-geo-distance-input.surql">
-				SELECT * FROM geo::distance( (51.509865, -0.118092), (-0.118092, 51.509865) );
+				RETURN geo::distance( (51.509865, -0.118092), (-0.118092, 51.509865) );
 			</Code>
 			<Code @name="docs-surrealql-functions-geo-distance-result.txt">
 				7491494.807105545
@@ -211,7 +211,7 @@
 		<p>If either argument is not a geolocation point, then an <Link @link="docs.surrealql.datamodel.simple"><code>EMPTY</code></Link> value will be returned:</p>
         <codes vertical>
 			<Code @name="docs-surrealql-functions-geo-distance-error-input.surql">
-				SELECT * FROM geo::distance(12345, true);
+				RETURN geo::distance(12345, true);
 			</Code>
 			<Code @name="docs-surrealql-functions-geo-distance-error-result.txt">
 				null
@@ -231,10 +231,10 @@
 		<Code @name="docs-surrealql-functions-geo-hash-decode.surql" text="API Definition">
 			geo::hash::decode(point) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-geo-hash-decode-input.surql">
-				SELECT * FROM geo::hash::decode("mpuxk4s24f51");
+				RETURN geo::hash::decode("mpuxk4s24f51");
 			</Code>
 			<Code @name="docs-surrealql-functions-geo-hash-decode-result.txt">
 				{
@@ -249,7 +249,7 @@
 		<p>If the argument is not a geolocation point, then an <Link @link="docs.surrealql.datamodel.simple"><code>EMPTY</code></Link> value will be returned:</p>
         <codes vertical>
 			<Code @name="docs-surrealql-functions-geo-hash-decode-error-input.surql">
-				SELECT * FROM geo::hash::decode(12345);
+				RETURN geo::hash::decode(12345);
 			</Code>
 			<Code @name="docs-surrealql-functions-geo-hash-decode-error-result.txt">
 				null
@@ -273,10 +273,10 @@
 		<Code @name="docs-surrealql-functions-geo-hash-encode-2.surql" text="API Definition">
 			geo::hash::encode(point, number) -> string
 		</Code>
-		<p>The following example shows this function, and its output, when used in a select statement:</p>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-geo-hash-encode-input-1.surql">
-				SELECT * FROM geo::hash::encode( (51.509865, -0.118092) );
+				RETURN geo::hash::encode( (51.509865, -0.118092) );
 			</Code>
 			<Code @name="docs-surrealql-functions-geo-hash-encode-result-1.txt">
 				"mpuxk4s24f51"
@@ -285,7 +285,7 @@
 		<p>The following example shows this function with two arguments, and its output, when used in a select statement:</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-functions-geo-hash-encode-input-2.surql">
-				SELECT * FROM geo::hash::encode( (51.509865, -0.118092), 5 );
+				RETURN geo::hash::encode( (51.509865, -0.118092), 5 );
 			</Code>
 			<Code @name="docs-surrealql-functions-geo-hash-encode-result-2.txt">
 				"mpuxk"
@@ -294,7 +294,7 @@
 		<p>If the first argument is not a geolocation point, then an <Link @link="docs.surrealql.datamodel.simple"><code>EMPTY</code></Link> value will be returned:</p>
         <codes vertical>
 			<Code @name="docs-surrealql-functions-geo-hash-encode-error-input.surql">
-				SELECT * FROM geo::hash::encode(12345);
+				RETURN geo::hash::encode(12345);
 			</Code>
 			<Code @name="docs-surrealql-functions-geo-hash-encode-error-result.txt">
 				null
