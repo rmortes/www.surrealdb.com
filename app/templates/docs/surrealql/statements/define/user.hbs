@@ -8,17 +8,22 @@
 
 <Layout::Text text-l text-f>
 	<h2><code>DEFINE USER</code> statement</h2>
-	<p>Use the <code>DEFINE USER</code> statement to create user accounts on SurrealDB.</p>
+	<p>Use the <code>DEFINE USER</code> statement to create system users on SurrealDB.</p>
 	<blockquote yellow text="Note">
 		While existing logins still function, the <code>DEFINE LOGIN</code> statement has been replaced with <code>DEFINE USER</code>.
 	</blockquote>
 
 	<h4>Requirements</h4>
 	<ul>
-		<li>You must be authenticated as a root user to create a root level account using the <code>DEFINE USER</code> statement.</li>
-		<li>You must be authenticated as a root or Namespace user to create a Namespace level account using the <code>DEFINE USER</code> statement.</li>
-		<li>You must be authenticated as a root, Namespace, or Database user to create a Database level account using the <code>DEFINE USER</code> statement.</li>
-		<li>Depending on the type of user you are trying to define, <LinkTo @route="docs.surrealql.statements.use">you might need to select a namespace and/or database</LinkTo> before you can use the <code>DEFINE USER</code> statement.</li>
+		<li>You must be authenticated with a user that has enough permissions. Only the <code>OWNER</code> built-in role grants permissions to create users.</li>
+		<li>You must be authenticated with a user that has permissions on the level where you are creating the user:
+			<ul>
+				<li>Root users can create Root, Namespace and Database users.</li>
+				<li>Namespace users can create Namespace and Database users</li>
+				<li>Database user can create Database users.</li>
+			</ul>
+		</li>
+		<li>To select the level where you want to create the user, <LinkTo @route="docs.surrealql.statements.use">you may need to select a namespace and/or database</LinkTo> before you can use the <code>DEFINE USER</code> statement.</li>
 	</ul>
 	<p>
 		Note: You cannot use the <code>DEFINE USER</code> statement to create a <code>SCOPE</code> user.
@@ -57,8 +62,8 @@
 	<table>
 		<thead>
 			<tr>
-				<th w-40>Role</th>
-				<th w-60>Description</th>
+				<th w-20>Role</th>
+				<th w-80>Description</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -66,19 +71,28 @@
 				<td>
 					<code>OWNER</code>
 				</td>
-				<td>Grants permissions to access and alter any resource.</td>
+				<td>
+					Can view and edit any resource on the user's level or below, including user and token (IAM) resources.
+					<br>It also grants full permissions for child resources that support the `PERMISSIONS` clause (tables, fields, etc.)
+				</td>
 			</tr>
 			<tr>
 				<td>
 					<code>EDITOR</code>
 				</td>
-				<td>Grants permissions to access any resource, and to alter any resource besides IAM related resources on the same level (such as users).</td>
+				<td>
+					Can view and edit any resource on the user's level or below, but not users or token (IAM) resources
+					<br>It also grants full permissions for child resources that support the `PERMISSIONS` clause (tables, fields, etc.)
+				</td>
 			</tr>
 			<tr>
 				<td>
 					<code>VIEWER</code>
 				</td>
-				<td>Grants permissions to access any resource, but does not allow altering resources.</td>
+				<td>
+					Grants permissions to view any resource on the user's level or below, but not edit.
+					<br>It also grants view permissions for child resources that support the `PERMISSIONS` clause (tables, fields, etc.)
+				</td>
 			</tr>
 		</tbody>
 	</table>

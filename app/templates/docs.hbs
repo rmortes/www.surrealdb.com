@@ -42,13 +42,6 @@
 				<Layout::Helm::Menu::Item @link="docs.installation.upgrading.beta8-to-beta9" @text="Upgrade beta-8 to beta-9" selected={{begs-with (route-name) "docs.installation.upgrading.beta8-to-beta9"}} />
 			</subs>
 
-			{{!-- <Layout::Helm::Menu::Item @link="docs.authentication" @text="Authentication" selected={{begs-with (route-name) "docs.authentication"}} />
-			<subs>
-				<Layout::Helm::Menu::Item @link="docs.authentication" @text="Overview" selected={{begs-with (route-name) "docs.authentication.index"}} />
-				<Layout::Helm::Menu::Item @link="docs.authentication.root" @text="Server-side" selected={{begs-with (route-name) "docs.authentication.root"}} />
-				<Layout::Helm::Menu::Item @link="docs.authentication.root" @text="Client-side" selected={{begs-with (route-name) "docs.authentication.root"}} />
-			</subs> --}}
-
 <Layout::Helm::Menu::Item @link="docs.surrealql" @text="SurrealQL" selected={{begs-with (route-name) "docs.surrealql"
 	}} />
 <subs>
@@ -242,12 +235,14 @@
 			<subs>
 				<Layout::Helm::Menu::Item @link="docs.security.index" @text="Overview"
 					selected={{begs-with (route-name) "docs.security.index" }} />
-				<Layout::Helm::Menu::Item @link="docs.security.paradigmes" @text="Paradigmes"
-					selected={{begs-with (route-name) "docs.security.paradigmes" }} />
-				<Layout::Helm::Menu::Item @link="docs.security.scope-authentication" @text="Scope authentication"
-					selected={{begs-with (route-name) "docs.security.scope-authentication" }} />
-				<Layout::Helm::Menu::Item @link="docs.security.system-users" @text="System users"
-					selected={{begs-with (route-name) "docs.security.system-users" }} />
+				<Layout::Helm::Menu::Item @link="docs.security.authentication" @text="Authentication"
+					selected={{begs-with (route-name) "docs.security.authentication" }} />
+				<subs>
+					<Layout::Helm::Menu::Item @link="#system-users" @text="System users"
+						selected={{is-waypoint "system-users" }} />
+					<Layout::Helm::Menu::Item @link="#scope-users" @text="Scope users"
+						selected={{is-waypoint "scope-users" }} />
+				</subs>
 			</subs>
 
 			<Layout::Helm::Menu::Item @link="docs.deployment" @text="Deployment" selected={{begs-with (route-name) "docs.deployment"}} />
