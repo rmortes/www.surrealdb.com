@@ -48,6 +48,24 @@
 			<p>Used to conditionally perform operations on the database</p>
 		</Layout::Boxes::Item>
 	</LinkTo>
+	<LinkTo @route="docs.surrealql.statements.for">
+		<Layout::Boxes::Item mini hover>
+			<h4><code>FOR</code> statement</h4>
+			<p>Used to loop over arrays or other forms of iterators</p>
+		</Layout::Boxes::Item>
+	</LinkTo>
+	<LinkTo @route="docs.surrealql.statements.break">
+		<Layout::Boxes::Item mini hover>
+			<h4><code>BREAK</code> statement</h4>
+			<p>Used to break out of a loop</p>
+		</Layout::Boxes::Item>
+	</LinkTo>
+	<LinkTo @route="docs.surrealql.statements.cONTINUE">
+		<Layout::Boxes::Item mini hover>
+			<h4><code>CONTINUE</code> statement</h4>
+			<p>Used to skip an iteration in a loop</p>
+		</Layout::Boxes::Item>
+	</LinkTo>
 	<LinkTo @route="docs.surrealql.statements.select">
 		<Layout::Boxes::Item mini hover>
 			<h4><code>SELECT</code> statement</h4>
@@ -125,6 +143,12 @@
 			<h4><code>SLEEP</code> statement</h4>
 			<p>Delays or pauses in the execution of a query or a batch</p>
 		</Layout::Boxes::Item>
+		<LinkTo @route="docs.surrealql.statements.tHROW">
+			<Layout::Boxes::Item mini hover>
+				<h4><code>THROW</code> statement</h4>
+				<p>Used to throw custom errors</p>
+			</Layout::Boxes::Item>
+		</LinkTo>
 	</LinkTo>
 </Layout::Boxes>
 

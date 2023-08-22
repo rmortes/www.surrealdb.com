@@ -184,6 +184,10 @@ Router.map(function () {
 				this.route('relate');
 				this.route('return');
 				this.route('delete');
+				this.route('for');
+				this.route('break');
+				this.route('continue');
+				this.route('throw');
 
 				this.route('define', function () {
 					this.route('namespace');
